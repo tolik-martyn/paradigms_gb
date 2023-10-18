@@ -4,8 +4,9 @@ package hw3.model;
  * Класс, представляющий игрока в игре в крестики-нолики.
  */
 public class Player {
-    private final String name;
-    private final Symbol symbol;
+    protected final String name;
+    protected final Symbol symbol;
+    protected boolean isBot;
 
     /**
      * Создает новый экземпляр класса Player с указанными параметрами.
@@ -16,6 +17,7 @@ public class Player {
     public Player(String name, Symbol symbol) {
         this.name = name;
         this.symbol = symbol;
+        this.isBot = false;
     }
 
     /**
@@ -34,5 +36,9 @@ public class Player {
      */
     public Symbol getSymbol() {
         return symbol;
+    }
+
+    public boolean isBot() {
+        return isBot;
     }
 }

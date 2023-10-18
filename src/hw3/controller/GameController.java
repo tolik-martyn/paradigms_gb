@@ -1,6 +1,5 @@
 package hw3.controller;
 
-import hw3.model.Bot;
 import hw3.model.Game;
 import hw3.view.InputDevice;
 import hw3.view.OutputDevice;
@@ -36,7 +35,7 @@ public class GameController {
             output.showTable(game.getTable());
             while (true) {
                 output.showMessage("Ходит: " + game.getCurrentPlayer().getName());
-                if ((game.getCurrentPlayer() instanceof Bot)) {
+                if (playerIsBot()) {
                     moveBot();
                 } else {
                     movePlayer();
@@ -109,5 +108,9 @@ public class GameController {
      */
     private void changeCurrentPlayer() {
         game.changeCurrentPlayer();
+    }
+
+    private boolean playerIsBot(){
+        return game.playerIsBot();
     }
 }

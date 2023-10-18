@@ -112,4 +112,8 @@ public class Game {
     public void initializeField() {
         table.initializeField();
     }
+
+    public boolean playerIsBot() {
+        return currentPlayer.isBot();
+    }
 }

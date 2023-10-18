@@ -12,6 +12,7 @@ public class Main {
 
         Table table = new Table(SIZE_X, SIZE_Y, WIN_COUNT);
         Player player1 = new Player("Игрок", Symbol.CROSS);
+        // Player testBot = new Bot("ТестБот", Symbol.CROSS);
         Player player2 = new Bot("Бот", Symbol.ZERO);
 
         InputDevice input = new ConsoleInput();
